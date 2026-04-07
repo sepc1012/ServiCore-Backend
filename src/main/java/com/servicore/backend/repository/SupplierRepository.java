@@ -8,8 +8,6 @@ import java.util.Optional;
 
 public interface SupplierRepository extends JpaRepository<Supplier, Long> {
 
-    List<Supplier> listByActiveTrue();
-
     Optional<Supplier> findByIdAndActiveTrue(Long id);
 
     boolean existsByNameAndActiveTrue(String name);
